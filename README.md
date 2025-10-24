@@ -26,10 +26,10 @@ Send text to server clipboard and image
 ## Установка
 
 1. Клонируйте репозиторий:  
-2. `cd /root/Desktop`  
-`python3 -m venv venv  `
-`source venv/bin/activate  `
-`pip install flask pyperclip  `
-`python clipboard.py  `
-3. Готово! `http://127.0.0.1:5555  `
+2. `cd /root/Desktop`    
+`python3 -m venv venv  `  
+`source venv/bin/activate  `  
+`pip install flask pyperclip  `  
+`python clipboard.py  `  
+3. Готово! `http://127.0.0.1:5555  `  
 <img width="672" height="705" alt="image" src="https://github.com/user-attachments/assets/3e10d788-12cc-46a3-842f-a247fee43e19" />
