@@ -31,5 +31,7 @@ Send text to server clipboard and image
 `source venv/bin/activate  `  
 `pip install flask pyperclip  `  
 `python clipboard.py  `  
-3. Готово! `http://127.0.0.1:5555  `  
+3. Готово! `http://127.0.0.1:5555  `
+4. Не забывайте разрешить порт `ufw allow 5555/tcp  `
+
 <img width="672" height="705" alt="image" src="https://github.com/user-attachments/assets/3e10d788-12cc-46a3-842f-a247fee43e19" />
