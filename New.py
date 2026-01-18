@@ -85,13 +85,48 @@ HTML_TEMPLATE = """
                 .catch(err => alert('Failed to fetch clipboard: ' + err));
         });
 
-        // Copy clipboard content to local clipboard
+        // Copy clipboard content to local clipboard with fallback
         const copyBtn = document.getElementById('copy_clipboard');
         copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(clipboardDiv.textContent)
-                .then(() => alert('Copied to local clipboard!'))
-                .catch(err => alert('Failed to copy: ' + err));
+            const text = clipboardDiv.textContent;
+            
+            // Try modern clipboard API first
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                    .then(() => alert('Copied to local clipboard!'))
+                    .catch(err => {
+                        console.error('Clipboard API failed:', err);
+                        fallbackCopy(text);
+                    });
+            } else {
+                // Use fallback method
+                fallbackCopy(text);
+            }
         });
+
+        // Fallback copy method using temporary textarea
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    alert('Copied to local clipboard!');
+                } else {
+                    alert('Failed to copy. Please copy manually.');
+                }
+            } catch (err) {
+                console.error('Fallback copy failed:', err);
+                alert('Failed to copy: ' + err);
+            }
+            
+            document.body.removeChild(textarea);
+        }
     </script>
 </body>
 </html>
