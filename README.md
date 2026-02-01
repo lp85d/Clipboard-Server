@@ -34,6 +34,5 @@ Send text to server clipboard and image
 3. Готово! `http://127.0.0.1:5555  `
 4. Не забывайте разрешить порт `ufw allow 5555/tcp  `
 
-<img width="672" height="705" alt="image" src="https://github.com/user-attachments/assets/3e10d788-12cc-46a3-842f-a247fee43e19" />
 <img width="835" height="924" alt="image" src="https://github.com/user-attachments/assets/bd2061b2-8eed-4807-a7ec-3c32bbd86abb" />
 
