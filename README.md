@@ -36,3 +36,4 @@ Send text to server clipboard and image
 
 <img width="835" height="924" alt="image" src="https://github.com/user-attachments/assets/bd2061b2-8eed-4807-a7ec-3c32bbd86abb" />
 
+<img width="517" height="1645" alt="Скриншёт" src="https://github.com/user-attachments/assets/c0a840ab-eab2-4942-ae6f-57fb6f359d1a" />
