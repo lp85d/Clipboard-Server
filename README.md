@@ -28,7 +28,7 @@ Send text to server clipboard and image
 1. Клонируйте репозиторий:  
 2. `pip3 install pyperclip --break-system-packages`  
 3. `pip install flask`  
-4. Готово! `http://ip:5555`  
+4. Готово! `http://ip:5555`  `apt-get install xclip`  
 5. Не забывайте разрешить порт `ufw allow 5555/tcp` если конечно же стоит файрвол  
 
 <img width="835" height="924" alt="image" src="https://github.com/user-attachments/assets/bd2061b2-8eed-4807-a7ec-3c32bbd86abb" />
